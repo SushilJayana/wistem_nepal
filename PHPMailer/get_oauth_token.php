@@ -30,12 +30,12 @@
 
 namespace PHPMailer\PHPMailer;
 
-/**
- * Aliases for League Provider Classes
- * Make sure you have added these to your composer.json and run `composer install`
- * Plenty to choose from here:
- * @see http://oauth2-client.thephpleague.com/providers/thirdparty/
- */
+    /**
+     * Aliases for League Provider Classes
+     * Make sure you have added these to your composer.json and run `composer install`
+     * Plenty to choose from here:
+     * @see http://oauth2-client.thephpleague.com/providers/thirdparty/
+     */
 // @see https://github.com/thephpleague/oauth2-google
 use League\OAuth2\Client\Provider\Google;
 // @see https://packagist.org/packages/hayageek/oauth2-yahoo
@@ -44,16 +44,16 @@ use Hayageek\OAuth2\Client\Provider\Yahoo;
 use Stevenmaguire\OAuth2\Client\Provider\Microsoft;
 
 if (!isset($_GET['code']) && !isset($_GET['provider'])) {
-?>
-<html>
-<body>Select Provider:<br/>
-<a href='?provider=Google'>Google</a><br/>
-<a href='?provider=Yahoo'>Yahoo</a><br/>
-<a href='?provider=Microsoft'>Microsoft/Outlook/Hotmail/Live/Office365</a><br/>
-</body>
-</html>
-<?php
-exit;
+    ?>
+    <html>
+    <body>Select Provider:<br/>
+    <a href='?provider=Google'>Google</a><br/>
+    <a href='?provider=Yahoo'>Yahoo</a><br/>
+    <a href='?provider=Microsoft'>Microsoft/Outlook/Hotmail/Live/Office365</a><br/>
+    </body>
+    </html>
+    <?php
+    exit;
 }
 
 require 'vendor/autoload.php';
